@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#10131c" />
+  <title>VALORANT: NEON STRIKE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game"></div>
+  <div class="scanlines"></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">V</span><span>NEON<span class="brand-hot">STRIKE</span></span></div>
+    <div class="match-info"><span class="map-name">HAVEN // A-SITE</span><span class="match-mode">SPIKE RUSH · ROUND <b id="round">01</b></span></div>
+    <div class="top-right"><span class="ping"><i></i> 24 MS</span><button id="soundBtn" class="icon-btn" aria-label="Sesi aç/kapat">♫</button><button id="pauseBtn" class="icon-btn" aria-label="Duraklat">Ⅱ</button></div>
+  </header>
+  <div class="round-banner" id="roundBanner"><span>ROUND 01</span><b>ATTACKERS</b><small>ELIMINATE ALL HOSTILES</small></div>
+  <div class="objective"><span class="objective-icon">◈</span><div><small>OBJECTIVE</small><b id="objectiveText">HOSTILES REMAINING: 05</b></div></div>
+  <div class="radar-wrap"><div class="radar-title">A <span>SECTOR</span></div><div class="radar" id="radar"><i class="radar-you"></i><div class="radar-sweep"></div></div></div>
+  <div class="killfeed" id="killfeed"></div>
+  <div class="center-message" id="centerMessage"></div>
+  <div class="damage-flash" id="damageFlash"></div>
+  <div class="hitmarker" id="hitmarker">✣</div>
+  <div class="crosshair" id="crosshair"><i></i><i></i><i></i><i></i><b></b></div>
+  <div class="bottom-hud">
+    <div class="health-panel"><div class="health-icon">✚</div><div class="health-data"><div class="label-row"><span>HEALTH</span><b id="healthNum">100</b></div><div class="meter"><i id="healthFill"></i></div></div></div>
+    <div class="ability-row"><div class="ability"><kbd>Q</kbd><span>BLINK</span><i class="ability-orb">✦</i></div><div class="ability"><kbd>E</kbd><span>RECON</span><i class="ability-orb">◉</i></div><div class="ability"><kbd>F</kbd><span>SPIKE</span><i class="ability-orb spike-orb">◈</i></div></div>
+    <div class="weapon-panel"><div class="ammo"><strong id="ammoNow">24</strong><span> / <b id="ammoReserve">120</b></span></div><div class="weapon-text"><b>VANDAL</b><small>RIFLE · FULL AUTO</small></div><div class="weapon-glyph">▰</div></div>
+  </div>
+  <div class="help-row"><span><kbd>W A S D</kbd> MOVE</span><span><kbd>SHIFT</kbd> RUN</span><span><kbd>SPACE</kbd> JUMP</span><span><kbd>R</kbd> RELOAD</span><span><kbd>Q</kbd> BLINK</span></div>
+  <div class="start-screen" id="startScreen">
+    <div class="start-content">
+      <div class="eyebrow"><i></i> TACTICAL FPS EXPERIENCE</div>
+      <h1>NEON<span>STRIKE</span></h1>
+      <p class="subtitle">A-SITE / HAVEN</p>
+      <div class="start-rule"></div>
+      <p class="brief">The site is compromised. Push through the courtyard,<br>take down the defenders, and secure the spike.</p>
+      <button id="playBtn" class="play-btn"><span>DEPLOY</span><b>→</b></button>
+      <div class="start-controls">WASD <i>MOVE</i> &nbsp;·&nbsp; MOUSE <i>AIM</i> &nbsp;·&nbsp; CLICK <i>FIRE</i> &nbsp;·&nbsp; R <i>RELOAD</i></div>
+    </div>
+    <div class="start-side"><div class="side-line"></div><span>PROTOCOL 07</span><b>PRECISION<br>IS POWER.</b><small>© NEON STRIKE // FIELD OPERATIVE</small></div>
+  </div>
+  <div class="pause-screen hidden" id="pauseScreen"><div class="pause-card"><small>FIELD OPERATIVE // PAUSED</small><h2>TAKE A BREATH.</h2><p>Click below to return to the site.</p><button id="resumeBtn" class="play-btn"><span>RESUME</span><b>→</b></button></div></div>
+  <div class="end-screen hidden" id="endScreen"><div class="end-card"><small id="endKicker">ROUND COMPLETE</small><h2 id="endTitle">SITE SECURED</h2><p id="endCopy">The defenders have been eliminated.</p><button id="nextBtn" class="play-btn"><span>NEXT ROUND</span><b>→</b></button></div></div>
+  <div class="mobile-controls" id="mobileControls"><div id="joystick" class="joystick"><i></i></div><div class="mobile-actions"><button id="mobileFire">FIRE</button><button id="mobileReload">R</button><button id="mobileBlink">Q</button></div></div>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
